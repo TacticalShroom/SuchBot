@@ -21,7 +21,7 @@ import java.sql.*;
 public class Main {
 
     public static void main(String[] args) throws LoginException, SQLException {
-        JDA jda = JDABuilder.createDefault("NzI1NDIzMjQ5MDQyNzAyNDcy.XvOhDA.OstZtqRC0xtYU0zeM5omftgY5Vw")
+        JDA jda = JDABuilder.createDefault(System.getenv("TOKEN"))
                 .build();
 
         CommandClientBuilder builder = new CommandClientBuilder();
