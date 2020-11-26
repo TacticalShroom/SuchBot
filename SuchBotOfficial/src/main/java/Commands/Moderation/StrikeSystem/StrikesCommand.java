@@ -36,11 +36,11 @@ public class StrikesCommand extends Command {
             else    {
                 EmbedBuilder eb = new EmbedBuilder();
                 try {
-                    new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getUser().getName() + "sStrikes.yml").createNewFile();
+                    new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getId() + "-Strikes.yml").createNewFile();
                 } catch (IOException exception) {
                     exception.printStackTrace();
                 }
-                File f = new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getUser().getName() + "sStrikes.yml");
+                File f = new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getId() + "-Strikes.yml");
                 FileConfiguration c = YamlConfiguration.loadConfiguration(f);
                 int strikes = c.getInt("strikecount");
                 ArrayList<String> strikeIDs = new ArrayList<>();

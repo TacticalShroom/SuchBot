@@ -40,11 +40,11 @@ public class WarnCommand extends Command {
                 }
                 else    {
                     try {
-                        new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getUser().getName() + "sWarns.yml").createNewFile();
+                        new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getId() + "-Warns.yml").createNewFile();
                     } catch (IOException exception) {
                         exception.printStackTrace();
                     }
-                    File f = new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getUser().getName() + "sWarns.yml");
+                    File f = new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getId() + "-Warns.yml");
                     FileConfiguration c = YamlConfiguration.loadConfiguration(f);
                     String warnID = e.getMessage().getId().replaceAll("`", "");
                     String reason = Arrays.toString(args)

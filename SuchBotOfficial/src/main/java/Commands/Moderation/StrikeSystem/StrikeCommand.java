@@ -40,11 +40,11 @@ public class StrikeCommand extends Command {
                 }
                 else if (member.hasPermission(Permission.MESSAGE_MANAGE))    {
                     try {
-                        new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getUser().getName() + "sStrikes.yml").createNewFile();
+                        new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getId() + "-Strikes.yml").createNewFile();
                     } catch (IOException exception) {
                         exception.printStackTrace();
                     }
-                    File f = new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getUser().getName() + "sStrikes.yml");
+                    File f = new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getId() + "-Strikes.yml");
                     FileConfiguration c = YamlConfiguration.loadConfiguration(f);
                     String strikeID = e.getMessage().getId().replaceAll("`", "");
                     String reason = Arrays.toString(args)

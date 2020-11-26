@@ -36,11 +36,11 @@ public class WarningsCommand extends Command {
             else    {
                 EmbedBuilder eb = new EmbedBuilder();
                 try {
-                    new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getUser().getName() + "sWarns.yml").createNewFile();
+                    new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getId() + "-Warns.yml").createNewFile();
                 } catch (IOException exception) {
                     exception.printStackTrace();
                 }
-                File f = new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getUser().getName() + "sWarns.yml");
+                File f = new File("C:\\Users\\titan\\SuchBotFiles\\" + member.getId() + "-Warns.yml");
                 FileConfiguration c = YamlConfiguration.loadConfiguration(f);
                 int warns = c.getInt("warncount");
                 ArrayList<String> warnIDs = new ArrayList<>();

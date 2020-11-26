@@ -28,7 +28,7 @@ public class MuteCommand extends Command {
                 else    {
                     member = e.getGuild().retrieveMemberById(args[1]).complete();
                 }
-                Role role = e.getGuild().getRoleById(779011570407047219L);
+                Role role = e.getGuild().getRoleById(672550127935684618L);
                 if (member == null) {
                     e.getChannel().sendMessage("Could not find specified user ID.").queue();
                 }
